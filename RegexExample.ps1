@@ -1,3 +1,18 @@
+<#
+.DESCRIPTION
+
+This PowerShell script processes a list of Christmas song titles to create a sortable song library. It does the following:
+
+- Defines an array of song titles.
+- Sets a regex pattern to match titles starting with "The", "A", or "An".
+- For each song, it checks if the title starts with one of these prefixes.
+- If so, it rearranges the title by moving the prefix to the end (e.g., "The First Noel" becomes "First Noel, The") for sorting purposes.
+- It creates a custom object for each song with both the original and sortable titles.
+- All song objects are added to a list, which is output at the end.
+
+This approach helps sort song titles alphabetically while ignoring common English prefixes.
+#>
+
 $Songs = @(
     "The Christmas Song"
     "The Little Drummer Boy"
